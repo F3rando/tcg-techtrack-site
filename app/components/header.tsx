@@ -37,6 +37,9 @@ export default function Header() {
             <Link href="/portfolio">Portfolio</Link>
           </li>
           <li>
+            <Link href="/recruitment">Recruitment</Link>
+          </li>
+          <li>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
