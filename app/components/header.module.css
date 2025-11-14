@@ -28,7 +28,8 @@
 
 .logoText {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   color: #000;
   transition: color 0.3s ease;
 }
@@ -47,10 +48,56 @@
 
 .navList a {
   text-decoration: none;
-  color: #333;
+  color: #6b7280;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .navList a:hover {
-  color: #2563eb;
+  color: #000;
 }
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 200px;
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdownMenu li {
+  padding: 0;
+}
+
+.dropdownMenu a {
+  display: block;
+  padding: 10px 20px;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.dropdownMenu a:hover {
+  background-color: #f3f4f6;
+  color: #000;
+}
+

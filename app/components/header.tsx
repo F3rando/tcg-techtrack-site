@@ -10,18 +10,25 @@ export default function Header() {
           <Image
             src="/tcg logo.png"
             alt="TCG TechTrack Logo"
-            width={40}
-            height={40}
+            width={140}
+            height={60}
             priority
           />
-          <span className={styles.logoText}>TCG TechTrack</span>
         </Link>
         <ul className={styles.navList}>
           <li>
             <Link href="/">Home</Link>
           </li>
-          <li>
+          <li className={styles.dropdown}>
             <Link href="/about-us">About</Link>
+            <ul className={styles.dropdownMenu}>
+              <li>
+                <Link href="/meet-the-team">Meet the Team</Link>
+              </li>
+              <li>
+                <Link href="/community-events">Community Events</Link>
+              </li>
+            </ul>
           </li>
           <li>
             <Link href="/services">Services</Link>

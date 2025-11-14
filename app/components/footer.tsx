@@ -1,59 +1,39 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./footer.module.css";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.section}>
-          <Link href="/" className={styles.logoContainer}>
-            <Image
-              src="/tcg logo.png"
-              alt="TCG TechTrack Logo"
-              width={40}
-              height={40}
-            />
-            <div>
-              <h3>TCG TechTrack</h3>
-              <p>Empowering businesses with technology solutions.</p>
-            </div>
-          </Link>
-        </div>
-        <div className={styles.section}>
-          <h4>Links</h4>
-          <ul>
-            <li>
-              <Link href="/about-us">About Us</Link>
-            </li>
-            <li>
-              <Link href="/services">Services</Link>
-            </li>
-            <li>
-              <Link href="/portfolio">Portfolio</Link>
-            </li>
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.section}>
-          <h4>Company</h4>
-          <ul>
-            <li>
-              <Link href="/careers">Careers</Link>
-            </li>
-            <li>
-              <Link href="/meet-the-team">Team</Link>
-            </li>
-            <li>
-              <Link href="/community-events">Events</Link>
-            </li>
-          </ul>
+        <Link href="/" className={styles.logoContainer}>
+          <Image
+            src="/tcg logo.png"
+            alt="TCG TechTrack Logo"
+            width={140}
+            height={60}
+          />
+        </Link>
+        <div className={styles.socialIcons}>
+          <a href="#" aria-label="Facebook" className={styles.iconLink}>
+            <FaFacebook />
+          </a>
+          <a href="#" aria-label="Twitter" className={styles.iconLink}>
+            <FaTwitter />
+          </a>
+          <a href="#" aria-label="LinkedIn" className={styles.iconLink}>
+            <FaLinkedin />
+          </a>
+          <a href="#" aria-label="Instagram" className={styles.iconLink}>
+            <FaInstagram />
+          </a>
         </div>
       </div>
       <div className={styles.bottom}>
-        <p>&copy; 2025 TCG TechTrack. All rights reserved.</p>
+        <Link href="/recruitment" className={styles.joinButton}>
+          Join the Team
+        </Link>
       </div>
     </footer>
   );
