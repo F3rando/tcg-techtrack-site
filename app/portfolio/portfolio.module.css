@@ -1,0 +1,140 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+.hero {
+  text-align: center;
+  margin-bottom: 48px;
+  /* different shade of blue (royal -> indigo) */
+  background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 56px 24px;
+  box-shadow: 0 20px 60px rgba(2, 6, 23, 0.12);
+}
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+.hero p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin: 0;
+}
+.ctaCard {
+  margin-top: 36px;
+  padding: 36px;
+  background: linear-gradient(180deg, #eaf2ff 0%, #f8fbff 100%);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.06);
+}
+.ctaButton {
+  display: inline-block;
+  padding: 12px 26px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.portfolioSection {
+  margin-top: 40px; /* shift section down */
+  padding-bottom: 48px; /* enlarge section vertically */
+}
+.portfolioCard {
+  background: #fff;
+  border-radius: 12px;
+  min-height: 160px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carousel styles */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 28px;
+}
+.carouselTrack {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 8px;
+  /* smoother continuous scroll */
+  animation: scroll 20s linear infinite;
+  will-change: transform;
+}
+.carouselCard {
+  min-width: 340px;
+  height: 220px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+}
+.carouselCard:hover { transform: translate3d(0,-8px,0); box-shadow: 0 18px 40px rgba(2,6,23,0.12); }
+
+@keyframes scroll {
+  0% { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(calc(-1 * (340px + 24px) * 4),0,0); }
+}
+.carousel:hover .carouselTrack { animation-play-state: paused; }
+
+.cardInner { position: relative; z-index: 1; font-size: 20px; color: #0b1220 }
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,17,34,0.78), rgba(11,17,34,0.86));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 240ms cubic-bezier(.2,.9,.2,1), transform 240ms cubic-bezier(.2,.9,.2,1);
+  border-radius: 12px;
+  z-index: 2;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+.carouselCard:hover .cardOverlay {
+  opacity: 1;
+  transform: translateY(0) scale(1.6);
+  box-shadow: 0 0 0 16px rgba(11,17,34,0.18);
+  min-width: 340px;
+  min-height: 220px;
+  padding: 32px 24px;
+  font-size: 1.25rem;
+}
+.overlayText { color: #fff; text-align: center }
+.overlayLabel { font-size: 12px; color: rgba(255,255,255,0.85); margin-bottom: 6px }
+.overlayValue { font-size: 16px; font-weight: 600 }
+
+@media (min-width: 640px) {
+  .portfolioGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .portfolioGrid { grid-template-columns: repeat(4, 1fr); }
+}
