@@ -4,6 +4,12 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* ensure header and dropdown sit above page content */
+.header {
+  position: relative;
+  z-index: 60;
+}
+
 .nav {
   max-width: 1280px;
   margin: 0 auto;
@@ -79,6 +85,11 @@
   transition: all 0.3s ease;
 }
 
+/* ensure the dropdown itself is above other page elements */
+.dropdownMenu {
+  z-index: 70;
+}
+
 .dropdown:hover .dropdownMenu {
   opacity: 1;
   visibility: visible;
@@ -100,4 +111,3 @@
   background-color: #f3f4f6;
   color: #000;
 }
-
