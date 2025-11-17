@@ -1,0 +1,162 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.hero h1 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero p {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 300px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+.sectionHeader {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.sectionHeader h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb; /* tcg blue?*/
+  margin: 0 0 8px 0;
+}
+
+.sectionHeader p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.0625rem;
+  color: #111827; /* near-black for readability */
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.cardsSection {
+  margin-top: 40px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 280px); /* three cards per row */
+  gap: 24px;
+  justify-content: center; 
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+}
+
+.cardImage {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* portrait */
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+}
+
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 260px);
+  }
+}
+
+/* Logo carousel under Impact section */
+.logoCarousel {
+  --card: 92px; /* square card size */
+  --gap: 20px;
+  --items: 10; /* number of unique items in first set */
+  margin-top: 28px;
+  padding: 24px 12px;
+  background: #f9fafb;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.logoTrack {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  animation: logoScroll 28s linear infinite;
+}
+
+.logoCarousel:hover .logoTrack {
+  animation-play-state: paused;
+}
+
+.logoCard {
+  min-width: var(--card);
+  height: var(--card);
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(17, 24, 39, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logoMark {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: radial-gradient(circle at 30% 30%, #e5e7eb, #d1d5db);
+}
+
+@keyframes logoScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * (var(--card) + var(--gap)) * var(--items))); }
+}
+
+@media (max-width: 640px) {
+  .cardsGrid {
+    grid-template-columns: 1fr; /* single card per row on mobile */
+  }
+}

@@ -2,6 +2,8 @@
   width: 100%;
   background-color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative; /* create stacking context for header */
+  z-index: 1000; /* ensure header sits above page content */
 }
 
 /* ensure header and dropdown sit above page content */
@@ -83,6 +85,7 @@
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
+  z-index: 2000; /* keep dropdown above any underlying content */
 }
 
 /* ensure the dropdown itself is above other page elements */
