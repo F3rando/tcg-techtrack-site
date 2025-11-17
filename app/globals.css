@@ -1,5 +1,6 @@
 /* app/globals.css */
 
+
 /* --- RESET & BASE --- */
 * {
   margin: 0;
@@ -59,6 +60,64 @@ button {
 
 button:hover {
   background-color: #204d77;
+}
+
+/* ============= TEAM HERO ============= */
+.team-hero {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.team-hero-overlay {
+  width: 100%;
+  padding: 4rem;
+  background: rgba(0, 47, 108, 0.45); /* blue, matches screenshot */
+}
+
+.team-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ============= INTRO ============= */
+.team-intro {
+  max-width: 900px;
+  margin: auto;
+}
+
+.team-intro-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ============= TEAM GRID ============= */
+.team-section-title {
+  font-size: 2.25rem;
+  margin: 3rem 0 1rem;
+  font-weight: 600;
+}
+
+.team-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.member-card {
+  text-align: left;
+}
+
+.member-photo {
+  width: 100%;
+  height: 260px;
+  margin-bottom: 1rem;
+  background-color: #dcdcdc;
 }
 
 /* --- SECTION STYLING --- */
@@ -121,9 +180,4 @@ footer {
   background-color: #f8f8f8;
   border-top: 1px solid #ddd;
 }
-.tag {
-  background: #f3f4f6;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-}
+

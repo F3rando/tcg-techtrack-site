@@ -1,0 +1,245 @@
+.teamHero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* container to match community-events layout (centers content and limits width) */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.teamHeroOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
+  border-radius: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.teamHeroOverlay h1 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  z-index: 1;
+}
+
+.teamHeroOverlay p {
+  color: #f3f4f6;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin: 0;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .teamHero {
+    height: 300px;
+  }
+  .teamHeroOverlay h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.teamIntroLeft {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.teamGrid {
+  margin-top: 40px;
+}
+
+.sectionNav {
+  max-width: 1280px;
+  margin: 24px auto 0 auto;
+  padding: 0 16px;
+  display: flex;
+  gap: 32px;
+  align-items: baseline;
+}
+
+.navButton {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.25rem;
+  color: #111827;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.navButton:hover {
+  color: #f4f4f5;
+  opacity: 1;
+}
+
+.active {
+  color: #1a3a5a;
+  font-weight: 600;
+}
+
+/* make headings scroll into view nicely below the fixed header */
+.teamSectionTitle {
+  scroll-margin-top: 110px;
+}
+
+.teamSectionTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+.teamPhotoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+/* group photo layout for Associates */
+.groupGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.groupCard {
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.groupPhoto {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+}
+
+.groupCaption {
+  padding: 14px 16px;
+}
+
+.groupCaption h3 {
+  margin: 0 0 6px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  color: #111827;
+}
+
+.groupCaption p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.memberCard {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.memberCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.memberPhoto {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 12px;
+}
+
+.placeholder {
+  background: linear-gradient(135deg, #e6eefc 0%, #f3f6ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.memberCard h3 {
+  margin: 8px 0 4px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.memberCard p {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* small utilities */
+.textCenter {
+  text-align: center;
+}
+
+.mt60 { margin-top: 60px; }
+
+
+/* Restore original hero overlay styling (ensure this takes precedence) */
+.teamHeroOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
+  border-radius: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.sectionButtons {
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+  justify-content: center;
+}

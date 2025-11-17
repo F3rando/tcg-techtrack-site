@@ -1,3 +1,4 @@
+
 import styles from "./contact.module.css";
 
 export default function ContactPage() {
@@ -74,4 +75,5 @@ export default function ContactPage() {
       </div>
     </div>
   );
+
 }
