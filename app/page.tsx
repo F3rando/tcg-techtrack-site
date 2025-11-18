@@ -6,11 +6,9 @@ export default function HomePage() {
     <main>
       {/* HERO SECTION */}
       <section className="hero">
-        <h1>Unlocking the Next Era of Business</h1>
-        <p>
-          Empowering tomorrow’s leaders with strategic insight and innovative
-          solutions.
-        </p>
+        <h1 className = "white-text-bold"><strong>Unlocking the Next Era of Business</strong></h1>
+          <div className="white-text"><p>Empowering tomorrow’s leaders with strategic insight and innovative
+          solutions.</p></div>
         <div>
           <Button>Learn More About TCG</Button>
           <Button variant="outline">Work With Us</Button>
@@ -19,44 +17,54 @@ export default function HomePage() {
 
       {/* OFFERINGS SECTION */}
       <section className="section offerings">
-        <h2>Offerings</h2>
-        <div className="card-container">
-          <div className="card">
-            <div className="placeholder" />
-            <h3>Operations & Strategy</h3>
-            <p>
-              Prepare and grow the organization’s presence and image in the
-              marketplace.
-            </p>
-          </div>
-
-          <div className="card">
-            <div className="placeholder" />
-            <h3>Financial Advisory</h3>
-            <p>
-              Target the finance business unit to effectively manage, schedule,
-              and budget organizational capital.
-            </p>
-          </div>
-
-          <div className="card">
-            <div className="placeholder" />
-            <h3>Technology</h3>
-            <p>
-              Implement solutions to integrate both business knowledge and
-              technical skill.
-            </p>
-          </div>
-
-          <div className="card">
-            <div className="placeholder" />
-            <h3>Market Research</h3>
-            <p>
-              Perform in-depth competitive analysis, market sizing, and market
-              analysis to guide strategy.
-            </p>
-          </div>
+        <h2>Offerings</h2> 
+        <div className = 'button-align-right'>
+          <Button>Our Services</Button>
         </div>
+        <div className="card-container">
+
+        <div className="card-wrapper">
+        <h3 className="card-title">Title Here</h3>
+        <div className="image-card">
+        <div className="placeholder" />
+        </div>
+        <p className="card-description">
+          This is a small descriptive paragraph about the card.
+        </p>
+       </div>
+
+        <div className="card-wrapper">
+          <h3 className="card-title">Title Here</h3>
+          <div className="image-card">
+            <div className="placeholder" />
+          </div>
+          <p className="card-description">
+            This is a small descriptive paragraph about the card.
+          </p>
+        </div>
+
+  <div className="card-wrapper">
+    <h3 className="card-title">Title Here</h3>
+    <div className="image-card">
+      <div className="placeholder" />
+    </div>
+    <p className="card-description">
+      This is a small descriptive paragraph about the card.
+    </p>
+  </div>
+
+  <div className="card-wrapper">
+    <h3 className="card-title">Title Here</h3>
+    <div className="image-card">
+      <div className="placeholder" />
+    </div>
+    <p className="card-description">
+      This is a small descriptive paragraph about the card.
+    </p>
+  </div>
+
+</div>
+
       </section>
 
       {/* ABOUT SECTION */}
@@ -72,7 +80,11 @@ export default function HomePage() {
             </p>
             <Button>Learn More About TCG</Button>
           </div>
-          <div className="placeholder about-image" />
+          <img
+            className="about-image"
+            src = "/About_Us_Home_Page.jpg"
+            alt="About Us Image"
+          ></img>
         </div>
       </section>
 
