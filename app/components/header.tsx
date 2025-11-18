@@ -40,6 +40,9 @@ export default function Header() {
             <Link href="/recruitment">Recruitment</Link>
           </li>
           <li>
+            <Link href="/careers">Careers</Link>
+          </li>
+          <li>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>

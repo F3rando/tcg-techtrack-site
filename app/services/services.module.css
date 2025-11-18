@@ -1,0 +1,268 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+.hero {
+  text-align: center;
+  margin-bottom: 48px;
+  /* large rounded hero — dark blue gradient */
+  background: linear-gradient(135deg, #0b1220 0%, #0b2447 50%, #153e75 100%);
+  color: #ffffff;
+  border-radius: 28px;
+  padding: 64px 24px;
+  box-shadow: 0 30px 80px rgba(2, 6, 23, 0.12);
+  position: relative;
+}
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 600; /* reduced weight to make it less bold */
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-shadow: 0 6px 24px rgba(2,6,23,0.06);
+}
+.hero p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.95;
+  color: rgba(255,255,255,0.95);
+}
+.heroInner { max-width: 1100px; margin: 0 auto }
+.ctaCard {
+  margin-top: 36px;
+  padding: 36px;
+  /* a shade lighter than the hero: soft blue gradient */
+  background: linear-gradient(135deg, #153e75 0%, #1f5aa0 60%, #2b6cb0 100%);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.06);
+}
+.ctaCard h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff; /* use white on this darker gradient */
+  margin: 0 0 12px 0;
+}
+.ctaCard p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 20px 0;
+}
+.ctaButton {
+  display: inline-block;
+  padding: 12px 26px;
+  background-color: #0f172a; /* strong dark navy for high contrast */
+  color: #ffffff;
+  border: 0;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(2,6,23,0.12);
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+.ctaButton:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 14px 34px rgba(2,6,23,0.16);
+  background-color: #0b1220;
+}
+.servicesSection {
+  margin-top: 48px;
+}
+.servicesSection h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 24px 0;
+}
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* 2x2 layout on wider screens */
+@media (min-width: 900px) {
+  .serviceGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+.serviceCard {
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
+}
+.serviceCard:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(17,24,39,0.08);
+}
+
+.serviceCard:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.serviceCard h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  margin: 0 0 8px 0;
+}
+.serviceCard p {
+  color: #4b5563;
+  margin: 0 0 12px 0;
+}
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  background: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+/* Project process (horizontal timeline) */
+.processSection {
+  margin-top: 48px;
+  padding: 36px 16px;
+  background: transparent;
+}
+
+.processSection h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.25rem; /* enlarged title */
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 28px 0;
+  text-align: center;
+}
+
+/* timeline container */
+.timeline {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 18px 0 8px;
+}
+
+/* horizontal list */
+.timelineList {
+  position: relative;
+  display: flex;
+  gap: 64px; /* more spacing between steps */
+  align-items: center;
+  padding: 16px 28px;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 1200px; /* allow wider timeline */
+}
+
+/* center connecting line */
+.timelineList::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  top: 50%;
+  height: 3px; /* thicker line */
+  background: rgba(15,23,42,0.07);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* each step */
+.timelineItem {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px; /* wider steps */
+  text-align: center;
+  gap: 12px;
+}
+
+/* circle marker */
+.timelineCircle {
+  width: 22px;   /* larger marker */
+  height: 22px;
+  border-radius: 50%;
+  background: #0f172a;
+  box-shadow: 0 8px 22px rgba(15,23,42,0.14);
+  border: 5px solid #fff; /* thicker white ring */
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  will-change: transform;
+}
+
+/* label and short description under each circle */
+.timelineLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.02rem; /* slightly larger label */
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.timelineLabel strong {
+  font-weight: 700;
+  font-size: 1.06rem;
+  color: #0b3d91;
+}
+
+/* hide the small descriptive subtext */
+.timelineDesc {
+  display: none;
+}
+
+/* hover emphasis */
+.timelineItem:hover .timelineCircle {
+  transform: scale(1.35);
+  box-shadow: 0 16px 36px rgba(15,23,42,0.2);
+}
+
+/* responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+  .timelineList {
+    flex-direction: column;
+    gap: 28px;
+    padding: 10px 0;
+  }
+
+  .timelineList::before {
+    left: 50%;
+    top: 8px;
+    width: 2px;
+    height: calc(100% - 16px);
+    transform: translateX(-50%);
+  }
+
+  .timelineItem {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .timelineCircle {
+    margin-left: 0;
+  }
+
+  .timelineLabel {
+    align-items: flex-start;
+  }
+}
