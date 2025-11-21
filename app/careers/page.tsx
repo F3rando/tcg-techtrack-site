@@ -26,13 +26,19 @@ export default function CareersPage() {
 			<section className={styles.cardsSection}>
 				<div className={styles.cardsGrid}>
 					<div className={styles.card}>
-						<div className={styles.cardImage} />
+						<div className={styles.cardImage}>
+							<Image src="/alise-fulltime.png" alt="Alise - Full Time Position" fill sizes="280px" style={{ objectFit: "cover" }} />
+						</div>
 					</div>
 					<div className={styles.card}>
-						<div className={styles.cardImage} />
+						<div className={styles.cardImage}>
+							<Image src="/roberto-fulltime.png" alt="Roberto - Full Time Position" fill sizes="280px" style={{ objectFit: "cover" }} />
+						</div>
 					</div>
 					<div className={styles.card}>
-						<div className={styles.cardImage} />
+						<div className={styles.cardImage}>
+							<Image src="/yash-fulltime.png" alt="Yash - Full Time Position" fill sizes="280px" style={{ objectFit: "cover" }} />
+						</div>
 					</div>
 				</div>
 			</section>
@@ -45,13 +51,19 @@ export default function CareersPage() {
 			<section className={styles.cardsSection}>
 				<div className={styles.cardsGrid}>
 					<div className={styles.card}>
-						<div className={styles.cardImage} />
+						<div className={styles.cardImage}>
+							<Image src="/kelly-intern.png" alt="Kelly - Internship" fill sizes="280px" style={{ objectFit: "cover" }} />
+						</div>
 					</div>
 					<div className={styles.card}>
-						<div className={styles.cardImage} />
+						<div className={styles.cardImage}>
+							<Image src="/kimberly-intern.png" alt="Kimberly - Internship" fill sizes="280px" style={{ objectFit: "cover" }} />
+						</div>
 					</div>
 					<div className={styles.card}>
-						<div className={styles.cardImage} />
+						<div className={styles.cardImage}>
+							<Image src="/winston-intern.png" alt="Winston - Internship" fill sizes="280px" style={{ objectFit: "cover" }} />
+						</div>
 					</div>
 				</div>
 			</section>
@@ -61,33 +73,44 @@ export default function CareersPage() {
 			</section>
 
 			{/* Logo carousel (smaller cards, auto-scroll, and they pause when you hover) */}
-			<div className={styles.logoCarousel} aria-label="Companies our members have impacted">
-				<div className={styles.logoTrack}>
-					{/* First set */}
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-
-					{/* Duplicate for seamless loop */}
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-					<div className={styles.logoCard}><div className={styles.logoMark} /></div>
-				</div>
-			</div>
+			{(() => {
+				const impactLogos = [
+					{ src: '/googlefix-logo.png', alt: 'Google' },
+					{ src: '/amazon-logo.jpg', alt: 'Amazon' },
+					{ src: '/tesla-logo.png', alt: 'Tesla' },
+					{ src: '/capitalone-logo.png', alt: 'Capital One' },
+					{ src: '/goldman-logo.png', alt: 'Goldman Sachs' },
+					{ src: '/salesforce-logo.png', alt: 'Salesforce' },
+					{ src: '/deloitte.png', alt: 'Deloitte' },
+					{ src: '/bain&company.png', alt: 'Bain & Company' },
+					{ src: '/bainbridge.png', alt: 'Bainbridge' },
+					{ src: '/kaiser-logo.png', alt: 'Kaiser' },
+					{ src: '/gofundme-logo.png', alt: 'GoFundMe' },
+					{ src: '/imb-logo.png', alt: 'IMB' }
+				];
+				const loop = impactLogos.concat(impactLogos); // duplicate for seamless scroll
+				return (
+					<div className={styles.logoCarousel} aria-label="Companies our members have impacted">
+						<div className={styles.logoTrack}>
+							{loop.map((logo, i) => {
+								const isGoogle = logo.alt === 'Google';
+								return (
+									<div className={styles.logoCard} key={i}>
+										<Image
+											src={logo.src}
+											alt={logo.alt}
+											width={isGoogle ? 48 : 56}
+											height={isGoogle ? 48 : 56}
+											style={{ objectFit: 'contain' }}
+											priority={i === 0}
+										/>
+									</div>
+								);
+							})}
+						</div>
+					</div>
+				);
+			})()}
 		</div>
 	);
 }

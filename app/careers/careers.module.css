@@ -110,6 +110,8 @@
   width: 100%;
   aspect-ratio: 3 / 4; /* portrait */
   background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  position: relative; /* allow Next/Image fill */
+  overflow: hidden;
 }
 
 @media (max-width: 1024px) {
