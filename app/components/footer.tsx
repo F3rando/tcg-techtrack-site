@@ -16,16 +16,34 @@ export default function Footer() {
           />
         </Link>
         <div className={styles.socialIcons}>
-          <a href="#" aria-label="Facebook" className={styles.iconLink}>
+          <a 
+            href="https://www.facebook.com/UCSDTCG/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Facebook" 
+            className={styles.iconLink}
+          >
             <FaFacebook />
           </a>
           <a href="#" aria-label="Twitter" className={styles.iconLink}>
             <FaTwitter />
           </a>
-          <a href="#" aria-label="LinkedIn" className={styles.iconLink}>
+          <a 
+            href="https://www.linkedin.com/company/triton-consulting-group-tcg-/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="LinkedIn" 
+            className={styles.iconLink}
+          >
             <FaLinkedin />
           </a>
-          <a href="#" aria-label="Instagram" className={styles.iconLink}>
+          <a 
+            href="https://www.instagram.com/tcgatucsd/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Instagram" 
+            className={styles.iconLink}
+          >
             <FaInstagram />
           </a>
         </div>

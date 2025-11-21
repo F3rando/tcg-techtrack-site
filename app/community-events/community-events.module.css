@@ -8,7 +8,6 @@
   position: relative;
   width: 100%;
   height: 400px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -18,6 +17,17 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.25));
+  z-index: 1;
+  pointer-events: none;
+}
+
 .hero h1 {
   color: white;
   font-family: 'Poppins', sans-serif;
@@ -25,7 +35,7 @@
   font-weight: 600;
   margin: 0 0 16px 0;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero p {
@@ -35,7 +45,7 @@
   font-weight: 300;
   margin: 0;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
   opacity: 0.95;
 }
 
@@ -114,22 +124,43 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  --card-width: 550px;
+  --gap: 24px;
+  --items: 7; /* unique images before duplication */
 }
 
 .carouselTrack {
   display: flex;
-  gap: 24px;
-  animation: scroll 30s linear infinite;
+  gap: var(--gap);
+  animation: scroll 32s linear infinite;
 }
 
 .carouselCard {
-  min-width: 550px;
+  position: relative; /* for Next/Image fill */
+  min-width: var(--card-width);
   height: 350px;
   background-color: #f3f4f6;
   border-radius: 16px;
+  overflow: hidden;
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+}
+
+.cardTitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 18px 10px 18px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
+  pointer-events: none;
+  z-index: 2;
 }
 
 .carouselCard:hover {
@@ -138,12 +169,8 @@
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-450px * 6 - 24px * 6));
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * (var(--card-width) + var(--gap)) * var(--items))); }
 }
 
 .carousel:hover .carouselTrack {

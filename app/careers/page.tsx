@@ -1,9 +1,19 @@
 import styles from "./careers.module.css";
+import Image from "next/image";
 
 export default function CareersPage() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.hero}>
+				<Image
+					src="/Geisel_close.png"
+					alt="Careers Header"
+					fill
+					sizes="(max-width: 1280px) 100vw, 1280px"
+					style={{ objectFit: "cover" }}
+					priority
+				/>
+				<div className={styles.heroOverlay} />
 				<h1>Careers</h1>
 				<p>Discover how Triton Consulting Group alumni excel in their careers and internships.</p>
 			</div>
@@ -50,7 +60,7 @@ export default function CareersPage() {
 				<p>Our alumni are currently thriving in a wide array of companies, and continue to expand their personal growth create impact across industries</p>
 			</section>
 
-			{/* Logo carousel (smaller cards, auto-scroll, pause on hover) */}
+			{/* Logo carousel (smaller cards, auto-scroll, and they pause when you hover) */}
 			<div className={styles.logoCarousel} aria-label="Companies our members have impacted">
 				<div className={styles.logoTrack}>
 					{/* First set */}
