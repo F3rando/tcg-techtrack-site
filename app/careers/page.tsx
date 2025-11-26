@@ -25,21 +25,48 @@ export default function CareersPage() {
 
 			<section className={styles.cardsSection}>
 				<div className={styles.cardsGrid}>
+				<div className={styles.cardWrapper}>
 					<div className={styles.card}>
 						<div className={styles.cardImage}>
 							<Image src="/alise-fulltime.png" alt="Alise - Full Time Position" fill sizes="280px" style={{ objectFit: "cover" }} />
 						</div>
 					</div>
+					<div className={styles.cardInfo}>
+						<h3 className={styles.cardName}>Alise Bruevich</h3>
+						<div className={styles.infoBubbles}>
+							<span className={styles.bubble}>Data Engineer</span>
+							<span className={styles.bubble}>Meta</span>
+						</div>
+					</div>
+				</div>
+				<div className={styles.cardWrapper}>
 					<div className={styles.card}>
 						<div className={styles.cardImage}>
 							<Image src="/roberto-fulltime.png" alt="Roberto - Full Time Position" fill sizes="280px" style={{ objectFit: "cover" }} />
 						</div>
 					</div>
+					<div className={styles.cardInfo}>
+						<h3 className={styles.cardName}>Roberto Valles Cué</h3>
+						<div className={styles.infoBubbles}>
+							<span className={styles.bubble}>Data Analyst</span>
+							<span className={styles.bubble}>J.P Morgan Chase</span>
+						</div>
+					</div>
+				</div>
+				<div className={styles.cardWrapper}>
 					<div className={styles.card}>
 						<div className={styles.cardImage}>
 							<Image src="/yash-fulltime.png" alt="Yash - Full Time Position" fill sizes="280px" style={{ objectFit: "cover" }} />
 						</div>
 					</div>
+					<div className={styles.cardInfo}>
+						<h3 className={styles.cardName}>Yash Potdar</h3>
+						<div className={styles.infoBubbles}>
+							<span className={styles.bubble}>Software Engineer</span>
+							<span className={styles.bubble}>Rivian</span>
+						</div>
+					</div>
+				</div>
 				</div>
 			</section>
 
@@ -49,22 +76,49 @@ export default function CareersPage() {
 			</section>
 
 			<section className={styles.cardsSection}>
-				<div className={styles.cardsGrid}>
+			<div className={styles.cardsGrid}>
+				<div className={styles.cardWrapper}>
 					<div className={styles.card}>
 						<div className={styles.cardImage}>
 							<Image src="/kelly-intern.png" alt="Kelly - Internship" fill sizes="280px" style={{ objectFit: "cover" }} />
 						</div>
 					</div>
+					<div className={styles.cardInfo}>
+						<h3 className={styles.cardName}>Kelly Yu</h3>
+						<div className={styles.infoBubbles}>
+							<span className={styles.bubble}>Business Intelligence Engineer Intern</span>
+							<span className={styles.bubble}>Roku</span>
+						</div>
+					</div>
+				</div>
+				<div className={styles.cardWrapper}>
 					<div className={styles.card}>
 						<div className={styles.cardImage}>
 							<Image src="/kimberly-intern.png" alt="Kimberly - Internship" fill sizes="280px" style={{ objectFit: "cover" }} />
 						</div>
 					</div>
+					<div className={styles.cardInfo}>
+						<h3 className={styles.cardName}>Kimberly Luga</h3>
+						<div className={styles.infoBubbles}>
+							<span className={styles.bubble}>Supply Chain Management Analyst</span>
+							<span className={styles.bubble}>Boeing</span>
+						</div>
+					</div>
+				</div>
+				<div className={styles.cardWrapper}>
 					<div className={styles.card}>
 						<div className={styles.cardImage}>
 							<Image src="/winston-intern.png" alt="Winston - Internship" fill sizes="280px" style={{ objectFit: "cover" }} />
 						</div>
 					</div>
+					<div className={styles.cardInfo}>
+						<h3 className={styles.cardName}>Winston Fan</h3>
+						<div className={styles.infoBubbles}>
+							<span className={styles.bubble}>Operations Manager Intern</span>
+							<span className={styles.bubble}>Amazon</span>
+						</div>
+					</div>
+				</div>
 				</div>
 			</section>
             <section className={styles.sectionHeader}>
@@ -84,7 +138,7 @@ export default function CareersPage() {
 					{ src: '/deloitte.png', alt: 'Deloitte' },
 					{ src: '/bain&company.png', alt: 'Bain & Company' },
 					{ src: '/bainbridge.png', alt: 'Bainbridge' },
-					{ src: '/kaiser-logo.png', alt: 'Kaiser' },
+					{ src: '/kaiserfix.png', alt: 'Kaiser' },
 					{ src: '/gofundme-logo.png', alt: 'GoFundMe' },
 					{ src: '/imb-logo.png', alt: 'IMB' }
 				];
