@@ -93,6 +93,12 @@
   justify-content: center; 
 }
 
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .card {
   background: #ffffff;
   border-radius: 20px;
@@ -114,6 +120,40 @@
   overflow: hidden;
 }
 
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.cardName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  text-align: center;
+}
+
+.infoBubbles {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bubble {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  background: #f3f4f6;
+  border-radius: 20px;
+  padding: 6px 14px;
+  white-space: nowrap;
+}
+
 @media (max-width: 1024px) {
   .cardsGrid {
     grid-template-columns: repeat(2, 260px);
@@ -124,7 +164,7 @@
 .logoCarousel {
   --card: 92px; /* square card size */
   --gap: 20px;
-  --items: 10; /* number of unique items in first set */
+  --items: 12; /* number of unique items in first set */
   margin-top: 28px;
   padding: 24px 12px;
   background: #f9fafb;
