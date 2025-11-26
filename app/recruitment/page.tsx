@@ -23,21 +23,37 @@ export default function RecruitmentPage() {
 
   return (
     <main>
-      <div className={styles.container}>
-        <section className={styles.hero}>
-          <div className={styles.heroOverlay}>
-            <h1>Recruitment</h1>
-            <p>Unlock your potential and shape the future of consulting with Triton Consulting Group</p>
-            <button className={styles.applyButton}>Apply Now</button>
-          </div>
-        </section>
+<div className={styles.container}>
+    <section
+      className={styles.hero}
+      style={{
+        backgroundImage:
+          "url(https://slack-imgs.com/?c=1&o1=ro.gu&url=https%3A%2F%2Fframerusercontent.com%2Fimages%2FR6IjytfYRuwoNoOEhI5oW8BUyw.png)",
+      }}
+    >
+      <div className={styles.heroOverlay}>
+        <h1>Recruitment</h1>
+        <p>
+          Unlock your potential and shape the future of consulting with Triton
+          Consulting Group
+        </p>
+
+        <a
+          href="https://tcg-application-portal.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className={styles.applyButton}>Apply Now</button>
+        </a>
       </div>
+    </section>
+  </div>
 
       <section className={styles.section}>
         <div className={styles.twoCol}>
           <div
             className={styles.cardImage}
-            style={{ backgroundImage: "url('https://via.placeholder.com/720x360?text=Group+Photo')" }}
+            style={{ backgroundImage: "url('/Recruitment1Photo.avif')" }}
             aria-hidden
           />
 
@@ -58,7 +74,7 @@ export default function RecruitmentPage() {
         <div className={styles.twoCol} style={{ alignItems: 'start' }}>
           <div
             className={styles.cardImage}
-            style={{ backgroundImage: "url('https://via.placeholder.com/560x360?text=Info+Night')" }}
+            style={{ backgroundImage: "url('/Recruitment2Photo.avif')" }}
             aria-hidden
           />
 
@@ -76,31 +92,20 @@ export default function RecruitmentPage() {
               equip you with consulting fundamentals, professional skills, and case interview
               preparation.
             </p>
+
+            <a
+               href="https://youtube.com/playlist?list=PLSZXI1eOuSUv2xYQAINf_ngd48EkaF51W&si=CvfwgoQM9_rhxnag"
+                target="_blank"
+                 rel="noopener noreferrer"
+                 className={styles.applyButton}
+                 style={{ marginTop: 18 }}
+               >
+                Case Prep Resources
+                </a>
+            
           </div>
         </div>
 
-        
-        {/* Placeholder examples for dress code: Business Professional / Business Casual */}
-        <section className={styles.section}>
-          <h2 className={styles.lead} style={{ fontSize: '1.5rem', color: '#111827' }}>Examples: Dress & Presentation</h2>
-
-          <div className={styles.photoGrid}>
-            <div className={styles.photoCard}>
-              <img className={styles.photoImage} src="https://via.placeholder.com/400x300?text=Business+Professional+1" alt="Business Professional example 1" />
-              <div className={styles.photoCaption}><strong>Business Professional</strong><div>Men and Women</div></div>
-            </div>
-
-            <div className={styles.photoCard}>
-              <img className={styles.photoImage} src="https://via.placeholder.com/400x300?text=Business+Professional+2" alt="Business Professional example 2" />
-              <div className={styles.photoCaption}><strong>Business Professional</strong><div>Alternate example</div></div>
-            </div>
-
-            <div className={styles.photoCard}>
-              <img className={styles.photoImage} src="https://via.placeholder.com/400x300?text=Business+Casual" alt="Business Casual example" />
-              <div className={styles.photoCaption}><strong>Business Casual</strong><div>Men and Women</div></div>
-            </div>
-          </div>
-        </section>
 
         <div className={styles.timeline}>
           <h2>Recruitment Timeline</h2>
