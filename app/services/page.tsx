@@ -1,7 +1,17 @@
+'use client';
+
 import styles from "./services.module.css";
 import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function ServicesPage() {
+  const [activeTimeline, setActiveTimeline] = useState<number | null>(null);
+
+  const handleTimelineClick = (index: number) => {
+    setActiveTimeline(activeTimeline === index ? null : index);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
@@ -10,14 +20,6 @@ export default function ServicesPage() {
           TCG Consulting provides strategic planning, growth, analysis, and
           implementation support to help organizations succeed.
         </p>
-      </div>
-
-      <div className={styles.ctaCard}>
-        <h2>Work With Us</h2>
-        <p>We partner with organizations to deliver measurable impact.</p>
-        <Link href="/contact" className={styles.ctaButton}>
-          Contact Us →
-        </Link>
       </div>
 
       {/* Inserted: horizontal project process timeline */}
@@ -31,7 +33,7 @@ export default function ServicesPage() {
               <div className={styles.timelineLabel}>
                 <strong>First Client Interaction</strong>
                 <div className={styles.timelineDesc}>
-                  Identify needs and develop a Statement of Work.
+                  Identify client's needs and establish clear communication channel by developing a Statement of Work
                 </div>
               </div>
             </li>
@@ -41,7 +43,7 @@ export default function ServicesPage() {
               <div className={styles.timelineLabel}>
                 <strong>Plan</strong>
                 <div className={styles.timelineDesc}>
-                  Define goals, project timeline and milestones.
+                  Define micro and macro goals and integrate into project timeline
                 </div>
               </div>
             </li>
@@ -51,7 +53,7 @@ export default function ServicesPage() {
               <div className={styles.timelineLabel}>
                 <strong>Research & Analysis</strong>
                 <div className={styles.timelineDesc}>
-                  Data-driven research and insights generation.
+                  Develop findings based on data driven analysis and research
                 </div>
               </div>
             </li>
@@ -61,21 +63,34 @@ export default function ServicesPage() {
               <div className={styles.timelineLabel}>
                 <strong>Delivery</strong>
                 <div className={styles.timelineDesc}>
-                  Present findings, hand off deliverables, and close engagement.
+                  Present findings, give deliverables, and conclude engagement
                 </div>
               </div>
             </li>
           </ol>
         </div>
+        
+        <p className={styles.processDescription}>
+          Each project team is led by a Project Manager and overseen by the VP of Consulting, with associates who complete a 10-week workshop before developing deliverables in close collaboration with clients.
+        </p>
       </section>
       {/* end timeline */}
 
       <section className={styles.servicesSection}>
-        <h2>What We Do</h2>
+        <h2 className={styles.sectionTitle}>What We Do</h2>
 
         <div className={styles.serviceGrid}>
           <div className={styles.serviceCard}>
             <h3>Operations and Strategy</h3>
+            <div className={styles.serviceImage}>
+              <Image 
+                src="/operations-strategy.jpg" 
+                alt="Operations and Strategy" 
+                width={300} 
+                height={100} 
+                style={{ objectFit: 'cover', borderRadius: '12px' }}
+              />
+            </div>
             <p>
               Operational planning, corporate strategy, organizational
               optimization, and process improvement support.
@@ -88,20 +103,16 @@ export default function ServicesPage() {
           </div>
 
           <div className={styles.serviceCard}>
-            <h3>Market Research</h3>
-            <p>
-              Industry research, competitor analysis, and insights that support
-              client decision-making.
-            </p>
-            <div className={styles.tags}>
-              <span className={styles.tag}>Market Sizing</span>
-              <span className={styles.tag}>Industry Analysis</span>
-              <span className={styles.tag}>Competitor Analysis</span>
-            </div>
-          </div>
-
-          <div className={styles.serviceCard}>
             <h3>Technology</h3>
+            <div className={styles.serviceImage}>
+              <Image 
+                src="/technology.jpg" 
+                alt="Technology" 
+                width={300} 
+                height={100} 
+                style={{ objectFit: 'cover', borderRadius: '12px' }}
+              />
+            </div>
             <p>
               Data analytics, software development, emerging tech, and systems
               integration solutions.
@@ -115,6 +126,15 @@ export default function ServicesPage() {
 
           <div className={styles.serviceCard}>
             <h3>Financial Advisory</h3>
+            <div className={styles.serviceImage}>
+              <Image 
+                src="/financial-advisory.jpg" 
+                alt="Financial Advisory" 
+                width={300} 
+                height={100} 
+                style={{ objectFit: 'cover', borderRadius: '12px' }}
+              />
+            </div>
             <p>
               Financial modeling, budget forecasting, reporting, and strategic
               financial planning.
@@ -123,6 +143,28 @@ export default function ServicesPage() {
               <span className={styles.tag}>Budget Forecasting</span>
               <span className={styles.tag}>Audit & Advisory</span>
               <span className={styles.tag}>Financial Modeling</span>
+            </div>
+          </div>
+
+          <div className={styles.serviceCard}>
+            <h3>Market Research</h3>
+            <div className={styles.serviceImage}>
+              <Image 
+                src="/market-research.jpg" 
+                alt="Market Research" 
+                width={300} 
+                height={100} 
+                style={{ objectFit: 'cover', borderRadius: '12px' }}
+              />
+            </div>
+            <p>
+              Industry research, competitor analysis, and insights that support
+              client decision-making.
+            </p>
+            <div className={styles.tags}>
+              <span className={styles.tag}>Market Sizing</span>
+              <span className={styles.tag}>Industry Analysis</span>
+              <span className={styles.tag}>Competitor Analysis</span>
             </div>
           </div>
         </div>
