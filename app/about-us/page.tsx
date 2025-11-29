@@ -1,70 +1,35 @@
 import React from "react";
 import { Button } from ".././components/button";
+import styles from "./about_us.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
     <main>
       {/* HERO SECTION */}
-      <section className="hero-about-us">
-        <h1 className = "white-text-bold"><strong>About Us</strong></h1>
-          <div className="white-text"><p>We’re UC San Diego’s premier student consulting group, 
-            providing services to companies in all stages of business development.</p></div>
-        <div>
-          <Button>Learn More About TCG</Button>
-          <Button variant="outline">Work With Us</Button>
-        </div>
-      </section>
-      {/* OUR MISSION SECTION */}
-      <section className="section about">
-        <div className="about-container">
-          <div className="about-text">
-            <h2>Our Mission</h2>
-            <p>
-              Our core focus is on providing our clients with exceptional consulting services of the highest caliber. 
-              Alongside this, we are dedicated to affording our members the appropriate channels for their professional 
-              and personal growth 
-            </p>
-          </div>
-          <img
-            className="about-image"
-            src = "/About_Us_Home_Page.jpg"
-            alt="About Us Image"
-          ></img>
-        </div>
-      </section>
+      <div className={styles.container}>
+      <section className={styles.hero}>
+  <Image
+    src="/Geisel_close.png"
+    alt="Home Page Hero"
+    fill
+    sizes="(max-width: 1280px) 100vw, 1280px"
+    style={{ objectFit: "cover" }}
+    priority
+  />
+  
+  <div className={styles.heroOverlay} />
 
-      {/* MEET OUR ASSOCIATES */}
-<section className="section associates-section">
-
-  {/* LEFT TITLE + RIGHT TEXT */}
-  <div className="associates-top">
-    <h2 className="associates-title">Meet Our Associates<br />Through the Years</h2>
-
-    <div className="associates-right">
-      <p>
-        All our incoming members are put through a rigorous analyst training program 
-        to receive training in traditional management consulting.
-      </p>
-      <Button>Learn More</Button>
-    </div>
+  <div className={styles.heroContent}>
+    <h1>About Us</h1>
+    <p>
+      We’re UC San Diego’s premier student consulting group, 
+      providing services to companies in all stages of business development.
+    </p>
   </div>
-
-  {/* BIG IMAGE */}
-  <div className="associates-image-wrapper">
-    <img
-      src="/Community_Events_Home_Page.jpg"
-      className="associates-image"
-      alt="Associates group photo"
-    />
-  </div>
-
-  {/* CAPTION BELOW */}
-  <p className="associates-caption">
-    Instead of flipping through pictures the user can hover over the image and once 
-    clicked it will take them to meet the associates.
-  </p>
-
 </section>
+</div>
 
       {/* WORKED ALONGSIDE */}
 <section className="section featured">
