@@ -41,7 +41,7 @@ p {
   width: 100%; /* make container full width */
 }
 
-/* --- HERO SECTION --- */
+/* --- HERO SECTION 
 .hero {
   background-color: #f4f4f4;
   height: 80vh;
@@ -56,7 +56,7 @@ p {
   background-size: cover;
   background-position: center;
 }
-
+--- */
 .hero-about-us {
   background-color: #f4f4f4;
   height: 80vh;
@@ -278,6 +278,9 @@ button:hover {
   height: 300px;
   background-color: #eee;
   border-radius: 12px;
+
+  position: relative;
+  overflow: hidden;
 }
 /* --- CARD LAYOUT --- */
 .card-container {

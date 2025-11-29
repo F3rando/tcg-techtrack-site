@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.homeRoot {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.containerWide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.bigButton {
+  padding: 14px 20px;
+  font-size: 1.125rem;
+  border-radius: 12px;
+}
+
+/* HERO — match careers hero exactly */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  margin-bottom: 40px;
+}
+
+/* Overlay gradient identical to Careers */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.25)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content wrapper */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 0 24px;
+}
+
+.heroContent h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.heroContent p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  opacity: 0.95;
+  margin-bottom: 24px;
+}
+
+.heroButtons button {
+  margin: 0 8px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 300px;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+}
+
+/* OFFERINGS SECTION */
+.offeringsSection {
+  margin-top: 60px;
+}
+
+/* Row with title + button */
+.sectionHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sectionHeaderRow h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Grid layout for cards */
+.offeringsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+/* Card container */
+.offeringsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+/* Image wrapper — same structure as Careers */
+.offeringsImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offeringsImage:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.16);
+}
+
+.offeringsCard h3 {
+  font-size: 1.750rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.offeringsCard p {
+  font-size: 0.95rem;
+  max-width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #374151;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .offeringsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionHeaderRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .offeringsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================= ABOUT US SECTION ========================= */
+.aboutSection {
+  padding: 60px 0;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.aboutText {
+  max-width: 55%;
+}
+
+.aboutText h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.aboutText p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* About image */
+.aboutImage {
+  width: 40%;
+  height: 300px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.aboutImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ====================== COMMUNITY EVENTS SECTION ====================== */
+.communitySection {
+  padding: 60px 0;
+}
+
+.communityContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.communityText {
+  max-width: 55%;
+}
+
+.communityText h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.communityText p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* community image */
+.communityImage {
+  width: 40%;
+  height: 300px;
+  border-radius: 14px;
+  background-color: #e5e7eb;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.communityImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FEATURED PROJECTS IMAGE SUPPORT */
+.imageCard {
+  position: relative;       /* needed for next/image fill */
+  flex: 1 1 280px;
+  max-width: 320px;
+  height: 260px;
+
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.imageCard:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+.imageCard img {
+  object-fit: cover;
+}
+
+/* ================= TEAM SECTION IMAGE ================= */
+.teamImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;         /* adjust height if needed */
+  margin-top: 32px;
+
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+}
+
+.teamImageWrapper img {
+  object-fit: cover;
+}
+
+/* ================= CLICKABLE TEAM IMAGE CARD ================= */
+.teamHoverCard {
+  position: relative;  
+  width: 100%;
+  height: 420px;
+  margin-top: 32px;
+  display: block;
+
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease;
+}
+
+.teamHoverCard:hover {
+  transform: scale(1.02);
+}
+
+.teamHoverCard img {
+  object-fit: cover;
+  transition: opacity 0.35s ease;
+}
+
+/* DARK HOVER OVERLAY */
+.teamHoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.35s ease;
+}
+
+.teamHoverCard:hover .teamHoverOverlay {
+  opacity: 1;
+}
+
+.teamHoverOverlay span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
