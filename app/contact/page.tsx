@@ -16,8 +16,8 @@ export default function ContactPage() {
         <h2>Let's Work Together</h2>
 				
         <div className={styles.emailInfo}>
-          <span className={styles.emailLabel}>Email</span>
-          <a href="mailto:board.tcg@gmail.com" className={styles.emailLink}>
+          <p className={styles.emailLabel} id="contact-email-label">Email</p>
+          <a href="mailto:board.tcg@gmail.com" className={styles.emailLink} aria-labelledby="contact-email-label">
             board.tcg@gmail.com
           </a>
         </div>
