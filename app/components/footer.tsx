@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./footer.module.css";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -24,9 +24,6 @@ export default function Footer() {
             className={styles.iconLink}
           >
             <FaFacebook />
-          </a>
-          <a href="#" aria-label="Twitter" className={styles.iconLink}>
-            <FaTwitter />
           </a>
           <a 
             href="https://www.linkedin.com/company/triton-consulting-group-tcg-/" 
