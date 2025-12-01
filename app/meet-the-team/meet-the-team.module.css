@@ -192,6 +192,13 @@
   margin-bottom: 12px;
 }
 
+.memberImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .placeholder {
   background: linear-gradient(135deg, #e6eefc 0%, #f3f6ff 100%);
   display: flex;
