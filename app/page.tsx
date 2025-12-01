@@ -29,8 +29,12 @@ export default function HomePage() {
     </p>
 
     <div className={styles.heroButtons}>
+      <a href="/about-us">
       <Button>Learn More About TCG</Button>
+      </a>
+      <a href="/contact">
       <Button variant="outline">Work With Us</Button>
+      </a>
     </div>
   </div>
 </section>
@@ -40,7 +44,9 @@ export default function HomePage() {
 <section className={styles.offeringsSection}>
   <div className={styles.sectionHeaderRow}>
     <h2>Offerings</h2>
+    <a href ="/services">
     <Button>Our Services</Button>
+    </a>
   </div>
 
     <div className={styles.containerWide}>
@@ -49,7 +55,7 @@ export default function HomePage() {
     <div className={styles.offeringsCard}>
       <div className={styles.offeringsImage}>
         <Image 
-          src="/bain&company.png"
+          src="/operations.png"
           alt="Offering 1"
           fill
           sizes="280px"
@@ -63,7 +69,7 @@ export default function HomePage() {
     <div className={styles.offeringsCard}>
       <div className={styles.offeringsImage}>
         <Image 
-          src="/bain&company.png"
+          src="/finance.png"
           alt="Offering 2"
           fill
           sizes="280px"
@@ -81,7 +87,7 @@ export default function HomePage() {
     <div className={styles.offeringsCard}>
       <div className={styles.offeringsImage}>
         <Image 
-          src="/bain&company.png"
+          src="/technology.png"
           alt="Offering 3"
           fill
           sizes="280px"
@@ -97,7 +103,7 @@ export default function HomePage() {
     <div className={styles.offeringsCard}>
       <div className={styles.offeringsImage}>
         <Image 
-          src="/bain&company.png"
+          src="/market_research.png"
           alt="Offering 4"
           fill
           sizes="280px"
@@ -127,7 +133,9 @@ export default function HomePage() {
               hands-on consulting experience and professional growth
               opportunities.
             </p>
+            <a href="/about-us">
             <Button>Learn More About TCG</Button>
+            </a>
           </div>
           <img
             className="about-image"
@@ -160,7 +168,9 @@ export default function HomePage() {
         our community through dynamic events that foster collaboration,
         growth, and shared success.
       </p>
+      <a href="/community-events">
       <Button variant="outline">View All Events</Button>
+      </a>
     </div>
 
   </div>
@@ -173,43 +183,48 @@ export default function HomePage() {
 
     <div className={styles.imageCard}>
       <Image 
-        src="/facebook-logo.png"
+        src="/cari_health.png"
         alt="Project 1"
-        fill
-        style={{ objectFit: "cover" }}
+        width = {300}
+        height = {300}
+        style={{ objectFit: "contain" }}
       />
     </div>
 
     <div className={styles.imageCard}>
       <Image 
-        src="/facebook-logo.png"
+        src="/tag.png"
         alt="Project 2"
-        fill
-        style={{ objectFit: "cover" }}
+        width = {300}
+        height = {300}
+        style={{ objectFit: "contain" }}
       />
     </div>
 
     <div className={styles.imageCard}>
       <Image 
-        src="/facebook-logo.png"
+        src="/vektor.png"
         alt="Project 3"
-        fill
-        style={{ objectFit: "cover" }}
+        width = {300}
+        height = {300}
+        style={{ objectFit: "contain" }}
       />
     </div>
 
     <div className={styles.imageCard}>
       <Image 
-        src="/facebook-logo.png"
+        src="/md_rev.png"
         alt="Project 4"
-        fill
-        style={{ objectFit: "cover" }}
+        width = {300}
+        height = {300}
+        style={{ objectFit: "contain" }}
       />
     </div>
 
   </div>
-
+    <a href="/portfolio">
   <Button>Explore Our Portfolio →</Button>
+  </a>
 </section>
 
 
@@ -221,13 +236,14 @@ export default function HomePage() {
     collaboration, innovation, and expertise drive impactful solutions for
     our clients and community.
   </p>
-
+    <a href="/meet-the-team">
   <Button>The Team →</Button>
+  </a>
 
   {/* CLICKABLE IMAGE */}
   <Link href="/meet-the-team" className={styles.teamHoverCard}>
     <Image
-      src="/community-header.png"   // your big classroom image here
+      src="/community-header.png" 
       alt="Meet the Associates"
       fill
       sizes="(max-width: 1280px) 100vw, 1200px"
