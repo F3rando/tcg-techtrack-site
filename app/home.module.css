@@ -283,8 +283,11 @@
   box-shadow: 0 12px 28px rgba(0,0,0,0.18);
 }
 
-.imageCard img {
-  object-fit: cover;
+.imageCard :global(img) {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  padding: 20px;
 }
 
 /* ================= TEAM SECTION IMAGE ================= */

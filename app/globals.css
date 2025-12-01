@@ -1,5 +1,12 @@
 /* app/globals.css */
 
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+html, body {
+  font-family: var(--font-poppins);
+}
 
 /* --- RESET & BASE --- */
 * {
