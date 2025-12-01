@@ -1,25 +1,15 @@
 import styles from './recruitment.module.css';
 import Link from 'next/link';
-// InstagramFeed is a client component used previously; to ensure thumbnails
-// are visible immediately we render server-side placeholders here.
+
 
 export const metadata = {
   title: 'Recruitment - TCG',
 };
 
 export default function RecruitmentPage() {
-  // create initial placeholder images server-side so the client can render immediately
   const handle = 'tcgatucsd';
   const profileUrl = `https://www.instagram.com/${encodeURIComponent(handle)}/?hl=en`;
-  // Instagram examples removed — no initial images
   
-  // const initialImages = Array.from({ length: 8 }).map((_, i) => ({
-  //   id: `${handle}-img-${i}`,
-  //   thumbnail: `https://via.placeholder.com/300x300?text=${encodeURIComponent(handle)}+${i+1}`,
-  //   full: `https://via.placeholder.com/1200x1200?text=${encodeURIComponent(handle)}+${i+1}`,
-  //   caption: `${handle} example image ${i + 1}`,
-  //   link: profileUrl,
-  // });
 
   return (
     <main>
