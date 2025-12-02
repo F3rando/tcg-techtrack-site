@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className = {styles.pageRoot}>
       {/* HERO SECTION */}
       <div className={styles.container}>
       <section className={styles.hero}>
@@ -31,9 +31,38 @@ export default function HomePage() {
 </section>
 </div>
 
+     <section className={styles.missionSection}>
+        <div className={styles.missionGrid}>
+          
+          {/* Left Text */}
+          <div className={styles.missionText}>
+            <p className={styles.missionTag}>Mission Statement</p>
+            <h2 className={styles.missionTitle}>Our Mission</h2>
+            <p className={styles.missionBody}>
+              Our core focus is on providing our clients with exceptional consulting
+              services of the highest caliber. Alongside this, we are dedicated to
+              affording our members the appropriate channels for their professional
+              and personal growth.
+            </p>
+          </div>
+
+          {/* Right Image */}
+          <div className={styles.missionImageWrapper}>
+            <Image
+              src="/recruitment-tcg.png" // ⬅️ replace with your real asset
+              alt="Mission"
+              width={700}
+              height={500}
+              className={styles.missionImage}
+            />
+          </div>
+
+        </div>
+      </section>
+
       {/* WORKED ALONGSIDE */}
 <section className="section featured">
-  <p>Worked Alongside...</p>
+  <h2>Worked Alongside...</h2>
 
   <div className="card-container centered">
 
