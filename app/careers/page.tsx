@@ -19,7 +19,7 @@ export default function CareersPage() {
 			</div>
 
 			<section className={styles.sectionHeader}>
-				<h2>Full Time Positions 2024</h2>
+				<h2>Full Time Positions</h2>
 				<p>Discover the full-time positions our TCG members and alumni have secured</p>
 			</section>
 
@@ -71,7 +71,7 @@ export default function CareersPage() {
 			</section>
 
 			<section className={styles.sectionHeader}>
-				<h2>Internships 2024</h2>
+				<h2>Internships</h2>
 				<p>Meet our TCG members and alumni who have secured impactful internships</p>
 			</section>
 
