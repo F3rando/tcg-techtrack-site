@@ -74,7 +74,7 @@
 }
 
 .heroButtons button {
-  background: rgba(0,0,0,0.8);
+  background: #0f4e74;
 	color: #fff;
 	padding: 10px 18px;
 	border-radius: 8px;
@@ -106,7 +106,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 2px;
 }
 
 .sectionHeaderRow h2 {
@@ -357,4 +357,8 @@
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.movetextRight { 
+  margin-left: 30px;
 }

@@ -42,11 +42,13 @@ export default function HomePage() {
 
       {/* OFFERINGS SECTION */}
 <section className={styles.offeringsSection}>
-  <div className={styles.sectionHeaderRow}>
-    <h2>Offerings</h2>
-    <a href ="/services">
-    <Button>Our Services</Button>
-    </a>
+  <div className={styles.container}>
+    <div className={styles.sectionHeaderRow}>
+      <h2>Offerings</h2>
+      <a href="/services">
+        <Button>Our Services</Button>
+      </a>
+    </div>
   </div>
 
     <div className={styles.containerWide}>
