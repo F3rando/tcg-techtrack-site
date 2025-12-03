@@ -116,8 +116,8 @@ export default function RecruitmentPage() {
 
             <div className={styles.timelineItem}>
               <div className={styles.timelineNumber}>03.</div>
-              <div className={styles.timelineTitle}>Coffee Chat</div>
-              <div className={styles.timelineDesc}>Meet with associates through scheduled coffee chats.</div>
+              <div className={styles.timelineTitle}>Social Night</div>
+              <div className={styles.timelineDesc}>Meet with associates in a casual setting.</div>
             </div>
 
             <div className={styles.timelineItem}>
