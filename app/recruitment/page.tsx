@@ -122,12 +122,6 @@ export default function RecruitmentPage() {
 
             <div className={styles.timelineItem}>
               <div className={styles.timelineNumber}>04.</div>
-              <div className={styles.timelineTitle}>Social Night</div>
-              <div className={styles.timelineDesc}>Meet the associates in a casual setting.</div>
-            </div>
-
-            <div className={styles.timelineItem}>
-              <div className={styles.timelineNumber}>05.</div>
               <div className={styles.timelineTitle}>Individual Interviews</div>
               <div className={styles.timelineDesc}>Invite only. Final step in the selection process.</div>
             </div>
@@ -138,7 +132,6 @@ export default function RecruitmentPage() {
           <div style={{ overflow: 'hidden' }}>
             <div style={{ display: 'flex', gap: 12, overflowX: 'auto', paddingBottom: 8 }}>
               <div className={styles.instaPlaceholder}>Instagram</div>
-              {/* Instagram feed removed per request — example images disabled */}
             </div>
           </div>
 
