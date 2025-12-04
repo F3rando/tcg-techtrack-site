@@ -141,7 +141,7 @@ export default function HomePage() {
           </div>
           <img
             className="about-image"
-            src = "/About_Us_Home_Page.jpg"
+            src = "/home_page_about_us_pic.png"
             alt="About Us Image"
           ></img>
         </div>
@@ -154,7 +154,7 @@ export default function HomePage() {
     {/* LEFT IMAGE */}
     <div className="community-image">
       <Image
-        src="/Community_Events_Home_Page.jpg"
+        src="/group_pic.png"
         alt="Community Events"
         fill
         sizes="(max-width: 1280px) 100vw, 600px"
