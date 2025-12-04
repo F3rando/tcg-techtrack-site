@@ -1,36 +1,373 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+TCG TechTrack Website – Documentation
 
-## Getting Started
+Live Site: https://tcg-techtrack-site.vercel.app/
 
-First, run the development server:
+Repository: https://github.com/F3rando/tcg-techtrack-site
 
-```bash
+1. Overview
+
+The TCG TechTrack website is a full-stack Next.js project representing Triton Consulting Group. It showcases the organization’s mission, services, team, recruitment pipeline, portfolio, and community culture.
+
+This documentation outlines each page’s structure, content, assets, and update instructions for future developers.
+
+2. Home Page (app/page.tsx)
+CSS Structure
+
+home.module.css – All homepage styling (primary CSS module)
+
+layout.tsx – Global font/layout wrapper
+
+globals.css – Legacy CSS; homepage code should not rely on this
+
+Sections
+Hero Banner
+
+A modern hero with mission text and CTAs directing to About or Contact pages.
+Image: Home_Page_Front.jpg
+
+Services Preview
+
+Interactive cards representing four service lines:
+
+Operations & Strategy
+
+Financial Advisory
+
+Technology
+
+Market Research
+Images:
+operations.png, finance.png, technology.png, market_research.png
+
+About Us Preview
+
+Intro text + team photo with CTA to full About page.
+Image: About_Us_Home_Page.jpg
+
+Community Events
+
+Highlights culture and member activities.
+Image: Community_Events_Home_Page.jpg
+
+Featured Projects
+
+Hover-enabled client collaboration cards.
+Images:
+cari_health.png, tag.png, vektor.png, md_rev.png
+
+Meet the Team
+
+Interactive profile previews linking to full team directory.
+Image: community-header.png
+
+Homepage Impact Summary
+
+Summarizes TCG’s value: professional consulting, student development, community-driven culture.
+
+3. About Us Page
+3.1 About Us Section
+
+Hero image + organizational overview.
+Images:
+Giesel_close.png, bainbridge.png, bain&company.png, deloitte.png
+Worked Alongside uses hoverable company partner logos.
+
+3.2 Meet the Team
+Hero Section
+
+Tagline introducing the team.
+Background: /Fall24-pic.avif
+
+Team Intro
+
+Explains TCG’s interdisciplinary membership and consulting experience.
+
+Executive Board
+
+Each board member has an individual card with image, name, and title.
+Images:
+/RiaS-pic.avif, /EdmondH-pic.avif, … (all listed in user doc)
+
+Associates (Cohort Photos)
+
+Cohorts include Winter 2025 → Winter 2021.
+Each contains:
+
+Group image
+
+Quarter title
+
+Exact caption text from code
+Images: /Winter25-pic.avif, /Fall24-pic.avif, … /Winter21-pic.avif
+
+Impact Summary
+
+Showcases team structure, history, and membership growth.
+
+3.3 Community Engagement Page
+Programs & Events
+
+Each program includes a description + image:
+
+Recruitment – /recruitment-tcg.png
+
+Mentor & Mentee – /mentor-mentee.png
+
+Winter Retreat – /Winter-retreat.png
+
+Spring Banquet – /Spring banquet tcg.png
+
+TCG Ladies Picnic – /TCG-Ladies-Picnic.png
+
+Reunion – /reunion.png
+
+Senior Sunset – /senior-sunset.png
+
+Impact Summary
+
+Illustrates how events support community, development, and cohesion.
+
+4. Services Page
+Hero
+
+Text: “TCG Consulting provides strategic planning…”
+Image: /services-hero.jpg
+
+Section 1: Project Process
+
+Four-step lifecycle:
+
+First Client Interaction
+
+Plan
+
+Research & Analysis
+
+Delivery
+
+Includes summary explaining PM + VP leadership and workshop structure.
+
+Section 2: What We Do (Service Cards)
+
+Each service includes image, description, and specialization tags.
+
+Operations & Strategy
+
+Image: /operations-strategy.jpg
+Tags: Strategic Analysis, Growth Development, Org Development
+
+Technology
+
+Image: /technology.jpg
+Tags: Data Analytics, Machine Learning, Website Development
+
+Financial Advisory
+
+Image: /financial-advisory.jpg
+Tags: Budget Forecasting, Audit & Advisory, Financial Modeling
+
+Market Research
+
+Image: /market-research.jpg
+Tags: Market Sizing, Industry Analysis, Competitor Analysis
+
+Impact Summary
+
+Explains TCG’s service capabilities and structured methodology.
+
+5. Portfolio Page
+Hero
+
+Text: “Explore the impact and innovation…”
+Image: /portfolio-hero.jpg
+
+Section 1: Previous Projects
+
+Auto-scrolling carousel of logos:
+
+TAG Biosciences
+
+Vektor Medical
+
+Cari Health
+
+MD Revolution
+
+Section 2: Case Studies
+
+Alternating image/text layout.
+
+TAG Biosciences
+
+Logo: /tag-biosciences-logo.png
+Case Image: /tag-biosciences-case.jpg
+
+Vektor Medical
+
+Logo: /vektor-medical-logo.png
+Case Image: /vektor-medical-case.jpg
+
+Cari Health
+
+Logo: /cari-health-logo.png
+Case Image: /cari-health-case.jpg
+
+MD Revolution
+
+Logo: /md-revolution-logo.png
+Case Image: /md-revolution-case.jpg
+
+Impact Summary
+
+Highlights 100+ client engagements and TCG’s value creation.
+
+6. Recruitment Page
+Hero
+
+Title: Recruitment
+Tagline: “Unlock your potential…”
+CTA: Apply Now → https://tcg-application-portal.vercel.app/
+
+First Info Section
+
+Includes CSS-set image: /Recruitment1Photo.avif
+
+Second Info Section
+
+Explains applicant eligibility, quarter timing, and Analyst Program.
+Image: /Recruitment2Photo.avif
+Button → Case Prep Resources playlist.
+
+Recruitment Timeline
+
+Five steps, exactly matching code text:
+
+Info Night
+
+Case Study Night
+
+Coffee Chat
+
+Social Night
+
+Individual Interviews
+
+Instagram Section
+
+Includes placeholder + follow-us description.
+
+Impact Summary
+
+Explains recruitment flow, culture fit, training, and community integration.
+
+7. Careers Page
+Career Resources:
+
+Resume workshops
+
+Mock interviews
+
+Networking sessions
+
+Full-Time Roles:
+
+Names + roles + logos:
+Example:
+
+Alise Bruevich – Data Engineer @ Meta – /alise-fulltime.png
+
+Internships:
+
+Example:
+
+Kelly Yu – Business Intelligence Engineer Intern @ Roku – /kelly-intern.png
+
+Member Impact Logos:
+
+Google, Amazon, Tesla, Salesforce, Deloitte, Bain, etc.
+Images: /googlefix-logo.png, /amazon-logo.jpg, …
+
+8. Contact Page
+Contact Info
+
+Email: board.tcg@gmail.com
+
+Instagram: https://www.instagram.com/tcgatucsd/
+
+LinkedIn: https://www.linkedin.com/company/triton-consulting-group-tcg-/
+
+Facebook: https://www.facebook.com/UCSDTCG/
+
+Website (legacy): https://tcgatucsd.org/
+
+Contact Form Fields
+
+Name
+
+Email
+
+Phone
+
+Company
+
+Subject
+
+Message
+
+9. Setup, Maintenance & Deployment
+9.1 Project Structure
+
+Suggested folder layout (fill in as needed):
+
+/src
+/components
+/pages
+/assets
+/public
+
+9.2 Tech Stack
+
+Next.js
+
+React
+
+TypeScript
+
+CSS Modules
+
+Vercel hosting
+(Add more if using Prisma, Tailwind, Sanity, etc.)
+
+9.3 Local Setup
+git clone https://github.com/F3rando/tcg-techtrack-site.git
+cd tcg-techtrack-site
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+9.4 Updating Content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Editing text: Edit corresponding page in /app/...
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Updating images: Save new images in /public/ and update references
 
-## Learn More
+Adding new sections: Follow existing component structure + CSS module patterns
 
-To learn more about Next.js, take a look at the following resources:
+9.5 Deployment
+Hosting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Build Command
+npm run build
 
-## Deploy on Vercel
+Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+(none right now)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployment Steps
+
+Push code to GitHub main
+
+Vercel auto-deploys
+
+Validate production build
